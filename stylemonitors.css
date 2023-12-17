@@ -1,0 +1,50 @@
+.cont{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px auto;
+    flex-wrap:wrap;
+}
+.card{
+    width: 45%;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+    position: relative;
+}
+.card_img{
+    
+    
+    margin: 10px;
+    height: 90%;
+    backface-visibility: hidden;
+    transition: 1s;
+   
+    text-align: center;
+   
+}
+.card_img img{
+    border-radius: 10px;
+}
+.card_img p{
+    text-align: center;
+}
+.backface_description{
+    top:0;
+    left: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    display: block;
+    transition: 1s;
+    position: absolute;
+    text-align: center;
+    
+    margin-top: 30%;
+}
+.card:hover .card_img{
+    transform: rotateY(180deg);
+}
+.card:hover .backface_description{
+    transform: rotateY(360deg);
+}
